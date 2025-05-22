@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/palma.png" type="image/x-icon">
+    <title>Torre de palma</title>
+    <link rel="stylesheet" href="css/cavalo-lusitano.css">
+</head>
+<body>
+    <div class="container-img-nav">
+        <img class="img-nav" src="img/palma.png" alt="">
+    </div>
+
+    <nav>
+        <a href="Index.html">Cavalo</a>
+        <a href="Venda.html">Venda</a>
+        <a href="Contatos.html">Contatos</a>
+    </nav>
+
+    <div class="img-container">
+        <img src="img/quarto-1.jpg" alt="">
+        <img src="img/casa-de-banho.jpg" alt="">
+    </div>
+
+    <div class="titulo">
+        <h2>Quarto Executivo</h2>
+        <hr>
+    </div>
+
+    <div class="main-container">
+        <div class="info">
+            <span class="text">Cama</span>
+            <span class="text-2">Casal</span>
+        </div>
+        <div class="info">
+            <span class="text">Pequeno almoço</span>
+            <span class="text-2">Sim</span>
+        </div>
+        <div class="info">
+            <span class="text">Wifi</span>
+            <span class="text-2">Sim</span>
+        </div>
+        <div class="info">
+            <span class="text">Serviço de Quarto</span>
+            <span class="text-2">Sim</span>
+        </div>
+    </div>
+
+    <div class="titulo-reservas">
+        <h2>Reservar</h2>
+        <hr>
+    </div>
+
+    <div class="reservas">
+        <p>Preço atual: <span id="preco">0,00€</span></p>
+        <button onclick="alterarPreco_1()">Noite 1</button> 
+        <button onclick="alterarPreco_2()">Noite 2</button>
+        <button onclick="alterarPreco_3()">Noite 3</button>
+        <button onclick="alterarPreco_4()">Noite 4</button>
+        <button onclick="alterarPreco_5()">Noite 5</button>
+        <button onclick="alterarPreco_6()">Noite 6</button>
+        <button onclick="alterarPreco_7()">Noite 7</button>
+    </div>
+    <div class="btn-dir">
+        <button id="enviar" onclick="Reservar()">Reservar</button>
+        <button onclick="limpar()">Limpar</button>
+    </div>
+
+    <footer>
+        <div class="footer_1">
+            <h2>Redes Sociais</h2>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i><br>
+        </div>
+    </footer>
+
+    <script src="Java/quarto-1.js"></script>
+    <script src="https://kit.fontawesome.com/c97cbab7f2.js" crossorigin="anonymous"></script>
+</body>
+</html>

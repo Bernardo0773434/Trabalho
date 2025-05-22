@@ -1,0 +1,140 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: Calibri;
+}
+
+.container-img-nav
+{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+.img-nav
+{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 400px;
+    height: 200px;
+}
+
+nav
+{
+    background-color: rgb(0, 0, 0);
+    display: block;
+    text-align: center;
+    padding: 15px 50px;
+}
+
+nav a
+{
+    padding: 15px 50px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    background-color: rgb(177, 177, 177);
+}
+
+table
+{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+table, th, td
+{
+    border:none;
+    padding: 10px;
+}
+
+table img
+{
+    max-width: 100%;
+}
+
+th
+{
+    padding-top: 100px;
+}
+
+td
+{
+    font-size: 20px;
+}
+
+table a
+{
+    text-decoration: none;
+    color: black;
+
+}
+
+table i
+{
+    font-size: 15px;
+    padding: 10px;
+}
+
+.quarto_4
+{
+    display: grid;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.quarto_4 img
+{
+    width: 630px;
+}
+
+.quarto_4 a
+{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.quarto_4 i
+{
+    font-size: 15px;
+    padding: 10px;
+}
+
+.txt_principal
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.txt_detalhes
+{
+    font-size: 20px;
+    font-style: italic;
+}
+
+footer
+{
+    background-color: rgb(0, 0, 0);
+    padding: 10px 50px;
+    color: white;
+}
+
+.footer_1
+{
+    padding-top: 20px;
+}
+
+.footer_1 i
+{
+    font-size: 25px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    color: white;
+}

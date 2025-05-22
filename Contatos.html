@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/palma.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/Contatos.css">
+    <title>Hotel Dugin</title>
+</head>
+<body>
+    <div class="container-img-nav">
+        <img class="img-nav" src="img/palma.png" alt="">
+    </div>
+
+    <nav>
+        <a href="Index.html">Home</a>
+        <a href="Alojamento.html">Alojamento</a>
+        <a href="Restaurante.html">Restaurante</a>
+        <a href="Contatos.html">Contatos</a>
+    </nav>
+
+    <form>
+        <div class="container-form">
+            <h2>Contacte-nos</h2>
+            <br>
+            <label for="fname">Nome</label>
+            <br>
+            <input type="text" id="fname" name="fname" placeholder="Nome..." required>
+            <br><br>
+            <label for="lname">Sobrenome</label>
+            <br>
+            <input type="text" id="lname" name="lname" placeholder="Sobrenome..." required>
+            <br><br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="Email..." required>
+            <br><br>
+            <label for="assunto">Assunto</label>
+            <br>
+            <input type="text" id="assunto" name="assunto" placeholder="Assunto..." required>
+            <br><br>
+            <label for="comentario">Comentário</label >
+            <br>
+            <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Escreva aqui o seu comentário..."></textarea required>
+            <br><br>
+            <input type="submit" id="submit" value="Enviar" onclick="Valiar()">
+        </div>
+    </form>
+    
+    <script src="java/Contatos.js"></script>
+</body>
+</html>
