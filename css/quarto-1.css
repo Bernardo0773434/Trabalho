@@ -1,179 +1,223 @@
-*
-{
-    padding: 0;
+:root {
+    --primary-color: #000000; /* Black for primary elements */
+    --secondary-color: #333333; /* Dark gray for secondary elements */
+    --text-color: #333333; /* Dark gray for text readability on white */
+    --background-color: #ffffff; /* White background */
+}
+
+* {
     margin: 0;
-    font-family: Calibri;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container-img-nav
-{
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
-.img-nav
-{
-    padding-bottom: 20px;
-    padding-top: 20px;
-    width: 400px;
-    height: 200px;
-}
-
-nav
-{
-    background-color: rgb(0, 0, 0);
-    display: block;
+.container-img-nav {
     text-align: center;
-    padding: 15px 50px;
+    padding: 1rem;
 }
 
-nav a
-{
-    padding: 15px 50px;
-    color: white;
+.img-nav {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.img-nav:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff; /* White for nav links on black background */
     text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-nav a:hover
-{
-    background-color: rgb(177, 177, 177);
+nav a:hover {
+    color: var(--secondary-color);
 }
 
-.img-container img
-{
-    max-width: 50%;
-    padding-top: 20px;
-    padding: 10px 40px;
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.titulo
-{
-    padding: 10px 40px;
-    padding-top: 40px;
+.img-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Black shadow for white background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.titulo hr
-{
-    max-width: 92.4%;
-    justify-content: center;
+.img-container img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.titulo, .titulo-reservas {
+    text-align: center;
+    padding: 1rem;
+}
+
+.titulo h2, .titulo-reservas h2 {
+    color: var(--primary-color);
+}
+
+.main-container {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
 }
 
-.main-container
-{
-    padding: 10px 40px;
-    padding-bottom: 100px;
+.info {
+    background-color: #f5f5f5; /* Light gray for info boxes on white background */
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 150px;
 }
 
-.info
-{
-    width: 44%;
-    float: left;
-    font-size: 13px;
-    padding: 16px 0px;
-}
-
-.text 
-{
-    font-size: 18px;
+.text {
+    display: block;
     font-weight: bold;
 }
 
-.text-2
-{
-    font-size: 17px;
-    font-style: italic;
-    padding: 10px;
+.text-2 {
+    color: var(--secondary-color);
 }
 
-.titulo-reservas
-{
-    padding: 10px 40px;
-    padding-top: 40px;
+.reservas {
+    text-align: center;
+    padding: 1rem;
 }
 
-.titulo-reservas hr
-{
-    max-width: 92.4%;
-    justify-content: center;
-    display: flex;
+.reservas button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.reservas p
-{
-    font-size: 19px;
-    padding-bottom: 15px;
+.reservas button:hover {
+    background-color: #4d4d4d; /* Lighter gray for hover */
 }
 
-.reservas 
-{
-    padding: 10px 40px;
+.btn-dir {
+    text-align: center;
+    padding: 1rem;
 }
 
-.reservas button
-{
-    padding: 10px 10px;
-    font-size: 16px;
-    background-color: rgb(179, 179, 179);
-    color: white;
-    font-weight: bold;
+.btn-dir button {
+    padding: 0.5rem 2rem;
+    margin: 0 0.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.reservas button:hover
-{
-    background-color: rgb(61, 61, 61);
+#enviar {
+    background-color: var(--secondary-color);
+    color: #ffffff;
 }
 
-.btn-dir
-{
-    padding: 10px 40px;
-    padding-bottom: 100px;
+#enviar:hover {
+    background-color: #4d4d4d;
 }
 
-.btn-dir button
-{
-    padding: 10px 10px;
-    font-size: 16px;
-    background-color: rgb(61, 61, 61);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
+.btn-dir button:last-child {
+    background-color: #666666; /* Medium gray for reset button */
+    color: #ffffff;
+}
+
+.btn-dir button:last-child:hover {
+    background-color: #808080;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer_1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.footer_1 i {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.btn-dir button:hover
-{
-    background-color: rgb(27, 27, 27);
+.footer_1 i:hover {
+    color: var(--secondary-color);
 }
 
-footer
-{
-    background-color: rgb(0, 0, 0);
-    padding: 10px 50px;
-    color: white;
+.footer_2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer_1
-{
-    padding-top: 20px;
+.footer_2 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.footer_1 i
-{
-    font-size: 25px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 20px;
-    color: white;
+.footer_2 img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
-.footer_2
-{
-    display: flex;
-    justify-content: center;
+@media (max-width: 768px) {
+    .img-container img {
+        height: 250px;
+    }
+
+    .footer_2 img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-container img {
+        height: 200px;
+    }
+
+    .footer_2 img {
+        height: 100px;
+    }
 }
