@@ -1,223 +1,112 @@
-:root {
-    --primary-color: #000000; /* Black for primary elements */
-    --secondary-color: #333333; /* Dark gray for secondary elements */
-    --text-color: #333333; /* Dark gray for text readability on white */
-    --background-color: #ffffff; /* White background */
-}
+/* Custom styles for quarto-1.html to complement Tailwind CSS */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Ensure the body takes full height and has a smooth font rendering */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+/* Header image container */
 .container-img-nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
 
-.img-nav {
-    max-width: 150px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.img-nav:hover {
-    transform: scale(1.05);
-}
-
+/* Navigation styling (fine-tuning Tailwind's nav) */
 nav {
-    background-color: var(--primary-color);
-    padding: 1rem;
-    text-align: center;
+    transition: all 0.3s ease;
 }
 
-nav a {
-    color: #ffffff; /* White for nav links on black background */
-    text-decoration: none;
-    margin: 0 1rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--secondary-color);
-}
-
-.img-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+/* Image container for room and bathroom images */
 .img-container img {
-    width: 100%;
-    height: 300px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Black shadow for white background */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 400px;
+    transition: transform 0.3s ease;
 }
 
 .img-container img:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.titulo, .titulo-reservas {
-    text-align: center;
-    padding: 1rem;
+/* Info section cards */
+.main-container .info {
+    transition: transform 0.2s ease;
 }
 
-.titulo h2, .titulo-reservas h2 {
-    color: var(--primary-color);
+.main-container .info:hover {
+    transform: translateY(-2px);
 }
 
-.main-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem;
-}
-
-.info {
-    background-color: #f5f5f5; /* Light gray for info boxes on white background */
-    padding: 1rem;
-    border-radius: 5px;
-    text-align: center;
-    min-width: 150px;
-}
-
-.text {
-    display: block;
-    font-weight: bold;
-}
-
-.text-2 {
-    color: var(--secondary-color);
-}
-
-.reservas {
-    text-align: center;
-    padding: 1rem;
-}
-
+/* Reservation buttons */
 .reservas button {
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: var(--secondary-color);
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .reservas button:hover {
-    background-color: #4d4d4d; /* Lighter gray for hover */
+    transform: translateY(-1px);
 }
 
-.btn-dir {
-    text-align: center;
-    padding: 1rem;
-}
-
-.btn-dir button {
-    padding: 0.5rem 2rem;
-    margin: 0 0.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#enviar {
-    background-color: var(--secondary-color);
-    color: #ffffff;
-}
-
-#enviar:hover {
-    background-color: #4d4d4d;
-}
-
-.btn-dir button:last-child {
-    background-color: #666666; /* Medium gray for reset button */
-    color: #ffffff;
-}
-
-.btn-dir button:last-child:hover {
-    background-color: #808080;
-}
-
+/* Footer styling */
 footer {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    padding: 2rem;
-    margin-top: 2rem;
-}
-
-.footer_1 {
-    text-align: center;
-    margin-bottom: 1rem;
+    margin-top: auto;
+    padding: 2rem 0;
 }
 
 .footer_1 i {
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .footer_1 i:hover {
-    color: var(--secondary-color);
-}
-
-.footer_2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    color: #cbd5e0; /* Tailwind's gray-300 */
 }
 
 .footer_2 img {
-    width: 100%;
-    height: 150px;
     object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .footer_2 img:hover {
-    transform: scale(1.05);
     opacity: 0.9;
 }
 
-@media (max-width: 768px) {
-    .img-container img {
-        height: 250px;
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .img-container {
+        flex-direction: column;
     }
 
-    .footer_2 img {
-        height: 120px;
+    .img-container img {
+        max-height: 300px;
+    }
+
+    .reservas .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer_1, .footer_2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer_2 {
+        justify-content: center;
+        margin-top: 1rem;
     }
 }
 
-@media (max-width: 480px) {
-    .img-container img {
-        height: 200px;
-    }
+/* Ensure hr elements in titles are consistent */
+.titulo hr,
+.titulo-reservas hr {
+    transition: width 0.3s ease;
+}
 
-    .footer_2 img {
-        height: 100px;
-    }
+.titulo:hover hr,
+.titulo-reservas:hover hr {
+    width: 4rem; /* Matches Tailwind's w-16 */
 }

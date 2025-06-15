@@ -1,104 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
+<head
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torre de Palma</title>
     <link rel="shortcut icon" href="img/palma.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/Index.css">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/c97cbab7f2.js" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c97cbab7f2.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
-        <div class="container-img-nav">
-            <img class="img-nav" src="img/palma.png" alt="Torre de Palma Logo">
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-center">
+            <img class="h-16 w-auto" src="img/palma.png" alt="Torre de Palma Logo">
         </div>
-
-        <nav>
-            <button class="hamburger">☰</button>
-            <ul class="nav-links">
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="Alojamento.html">Alojamento</a></li>
-                <li><a href="Restaurante.html">Restaurante</a></li>
-                <li><a href="Contatos.html">Contatos</a></li>
-            </ul>
+        <nav class="bg-gray-800 text-white">
+            <div class="container mx-auto px-4 py-2 flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+                <a href="Index.html" class="hover:bg-gray-700 px-3 py-2 rounded">Home</a>
+                <a href="Alojamento.html" class="hover:bg-gray-700 px-3 py-2 rounded">Alojamento</a>
+                <a href="Restaurante.html" class="hover:bg-gray-700 px-3 py-2 rounded">Restaurante</a>
+                <a href="Contatos.html" class="hover:bg-gray-700 px-3 py-2 rounded">Contatos</a>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main class="container mx-auto px-4 py-6">
         <section class="selection-2">
-            <div class="text-titulo">
-                <h2>Quartos</h2>
+            <div class="flex justify-between items-center my-6">
+                <h2 class="text-2xl font-bold">Quartos</h2>
+                <a href="Alojamento.html" class="text-blue-600 hover:text-blue-800 flex items-center">
+                    Ver todos <i class="fa fa-long-arrow-right ml-2"></i>
+                </a>
             </div>
-            <div class="text-btn">
-                <a href="Alojamento.html">Ver todos <i class="fa fa-long-arrow-right icon-long-arrow-right"></i></a>
-            </div>
-            <div class="img-container">
-                <div class="quartos">
-                    <img src="img/quarto-1.jpg" alt="Quarto Casal">
-                    <h2>Quarto Casal</h2>
+            <div class="img-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="quartos bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="img/quarto-1.jpg" alt="Quarto Casal" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-center text-lg font-semibold p-4">Quarto Casal</h3>
                 </div>
-                <div class="quartos">
-                    <img src="img/quarto-2.jpg" alt="Quarto Duplo">
-                    <h2>Quarto Duplo</h2>
+                <div class="quartos bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="img/quarto-2.jpg" alt="Quarto Duplo" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-center text-lg font-semibold p-4">Quarto Duplo</h3>
                 </div>
-                <div class="quartos">
-                    <img src="img/quarto-3.jpg" alt="Quarto Duplo">
-                    <h2>Quarto Duplo</h2>
+                <div class="quartos bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="img/quarto-3.jpg" alt="Quarto Duplo" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-center text-lg font-semibold p-4">Quarto Duplo</h3>
                 </div>
-                <div class="quartos">
-                    <img src="img/quarto-4.jpg" alt="Master Suite">
-                    <h2>Master Suite</h2>
+                <div class="quartos bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="img/quarto-4.jpg" alt="Master Suite" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-center text-lg font-semibold p-4">Master Suite</h3>
                 </div>
             </div>
         </section>
 
-        <section class="experiences">
-            <div class="experience-grid">
-                <div class="experience-item">
-                    <img src="img/Restaurante.jpg" alt="Restaurante">
-                    <h3>Restaurante</h3>
-                    <p>Aqui, entre as planícies do Alto Alentejo, encontram-se produtores locais de grande paixão, seja à volta dos enchidos caseiros, queijos puros, ou animais de pasto cuidadosamente selecionados.</p>
+        <section class="experiences my-6">
+            <h2 class="text-2xl font-bold text-center mb-6">Experiências</h2>
+            <div class="experience-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="experience-item bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="img/Restaurante.jpg" alt="Restaurante" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Restaurante</h3>
+                        <p class="text-gray-600">Aqui, entre as planícies do Alto Alentejo, encontram-se produtores locais de grande paixão, seja à volta dos enchidos caseiros, queijos puros, ou animais de pasto cuidadosamente selecionados.</p>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <img src="img/Equitação.jpg" alt="Equitação">
-                    <h3>Equitação</h3>
-                    <p>Venha desfrutar de um passeio a cavalo.</p>
+                <div class="experience-item bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="img/Equitação.jpg" alt="Equitação" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Equitação</h3>
+                        <p class="text-gray-600">Venha desfrutar de um passeio a cavalo.</p>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <img src="img/Vinho.jpg" alt="Vinho">
-                    <h3>Vinho</h3>
-                    <p>Venha provar os nossos vinhos.</p>
+                <div class="experience-item bg-white roundedintre, queijos puros, ou animais de pasto cuidadosamente selecionados.</p>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <img src="img/Natureza.jpg" alt="Natureza">
-                    <h3>Natureza</h3>
-                    <p>Venha visitar as nossas paisagens naturais.</p>
+                <div class="experience-item bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="img/Vinho.jpg" alt="Vinho" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Vinho</h3>
+                        <p class="text-gray-600">Venha provar os nossos vinhos.</p>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <img src="img/Spa.jpg" alt="SPA">
-                    <h3>SPA</h3>
-                    <p>Venha desfrutar de uma massagem.</p>
+                <div class="experience-item bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="img/Natureza.jpg" alt="Natureza" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Natureza</h3>
+                        <p class="text-gray-600">Venha visitar as nossas paisagens naturais.</p>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <img src="img/Hotel.jpg" alt="Hotel">
-                    <h3>Hotel</h3>
-                    <p>Torre de Palma é um mundo de experiências autênticas por descobrir. Selecionámos o melhor que temos para si: do vinho, à gastronomia, ao bem-estar e ao contacto com a natureza.</p>
-                </div>
-            </div>
-        </section>
-    </main>
- <footer>
-        <div class="redes-sociais">
-            <h2>Redes Sociais</h2>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-        </div>
-      
-    </footer>
-
-    <script src="java/Index.js"></script>
-</body>
-</html>
+                <div class="experience-item bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="img/Spa.jpg" alt="SPA" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">SPA</h3>
+                        <p class="text-gray-600">Velha visitar os nosso spa

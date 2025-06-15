@@ -1,246 +1,112 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Calibri', 'Arial', sans-serif;
+/* Custom styles for quarto-2.html to complement Tailwind CSS */
+
+/* Ensure the body takes full height and has a smooth font rendering */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+/* Header image container */
 .container-img-nav {
-    background-color: #ffffff;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
 
-.img-nav {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    padding: 1rem 0;
-}
-
+/* Navigation styling (fine-tuning Tailwind's nav) */
 nav {
-    background-color: #000000;
-    text-align: center;
-    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
 }
 
-nav a {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-nav a:hover {
-    background-color: #b1b1b1;
-    border-radius: 5px;
-}
-
-.img-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
-}
-
+/* Image container for room and bathroom images */
 .img-container img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    padding: 0.5rem;
     object-fit: cover;
+    max-height: 400px;
+    transition: transform 0.3s ease;
 }
 
-.titulo {
-    padding: 2rem 1rem;
-    text-align: center;
+.img-container img:hover {
+    transform: scale(1.02);
 }
 
-.titulo hr {
-    width: 100%;
-    max-width: 200px;
-    margin: 0.5rem auto;
-    border: 1px solid #000000;
+/* Info section cards */
+.main-container .info {
+    transition: transform 0.2s ease;
 }
 
-.main-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-    margin-bottom: 2rem;
+.main-container .info:hover {
+    transform: translateY(-2px);
 }
 
-.info {
-    font-size: 0.9rem;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
-
-.text {
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-.text-2 {
-    font-size: 1rem;
-    font-style: italic;
-    padding: 0.5rem 0;
-}
-
-.titulo-reservas {
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.titulo-reservas hr {
-    width: 100%;
-    max-width: 200px;
-    margin: 0.5rem auto;
-    border: 1px solid #000000;
-}
-
-.reservas {
-    padding: 1rem;
-    text-align: center;
-}
-
-.reservas p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
+/* Reservation buttons */
 .reservas button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    background-color: #b3b3b3;
-    color: #ffffff;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0.25rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .reservas button:hover {
-    background-color: #3d3d3d;
+    transform: translateY(-1px);
 }
 
-.btn-dir {
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.btn-dir button {
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-    background-color: #3d3d3d;
-    color: #ffffff;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-dir button:hover {
-    background-color: #1b1b1b;
-}
-
+/* Footer styling */
 footer {
-    background-color: #000000;
-    padding: 1rem;
-    color: #ffffff;
-    text-align: center;
-}
-
-.footer_1 {
-    padding: 1rem 0;
+    margin-top: auto;
+    padding: 2rem 0;
 }
 
 .footer_1 i {
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.footer_2 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 1rem 0;
+.footer_1 i:hover {
+    color: #cbd5e0; /* Tailwind's gray-300 */
 }
 
 .footer_2 img {
-    width: 60px;
-    height: 60px;
     object-fit: cover;
-    border-radius: 5px;
+    transition: opacity 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .img-nav {
-        max-width: 200px;
-    }
+.footer_2 img:hover {
+    opacity: 0.9;
+}
 
-    nav {
-        padding: 0.5rem;
-    }
-
-    nav a {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .img-container {
+        flex-direction: column;
     }
 
     .img-container img {
-        max-width: 100%;
+        max-height: 300px;
     }
 
-    .main-container {
-        grid-template-columns: 1fr;
+    .reservas .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .info {
-        font-size: 0.85rem;
+    .footer_1, .footer_2 {
+        width: 100%;
+        text-align: center;
     }
 
-    .reservas button {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .btn-dir button {
-        padding: 0.5rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .footer_2 img {
-        width: 50px;
-        height: 50px;
+    .footer_2 {
+        justify-content: center;
+        margin-top: 1rem;
     }
 }
 
-@media (max-width: 480px) {
-    .img-nav {
-        max-width: 150px;
-    }
+/* Ensure hr elements in titles are consistent */
+.titulo hr,
+.titulo-reservas hr {
+    transition: width 0.3s ease;
+}
 
-    nav a {
-        display: block;
-        margin: 0.25rem 0;
-    }
-
-    .titulo h2, .titulo-reservas h2 {
-        font-size: 1.5rem;
-    }
-
-    .reservas p {
-        font-size: 1rem;
-    }
+.titulo:hover hr,
+.titulo-reservas:hover hr {
+    width: 4rem; /* Matches Tailwind's w-16 */
 }

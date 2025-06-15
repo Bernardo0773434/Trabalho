@@ -1,179 +1,113 @@
-*
-{
-    padding: 0;
-    margin: 0;
-    font-family: Calibri;
+```css
+/* Custom styles for quarto-3.html to complement Tailwind CSS */
+
+/* Ensure the body takes full height and has a smooth font rendering */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.container-img-nav
-{
-    background-color: rgb(255, 255, 255);
+/* Header image container */
+.container-img-nav {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
-.img-nav
-{
-    padding-bottom: 20px;
-    padding-top: 20px;
-    width: 400px;
-    height: 200px;
+/* Navigation styling (fine-tuning Tailwind's nav) */
+nav {
+    transition: all 0.3s ease;
 }
 
-nav
-{
-    background-color: rgb(0, 0, 0);
-    display: block;
-    text-align: center;
-    padding: 15px 50px;
+/* Image container for room and bathroom images */
+.img-container img {
+    object-fit: cover;
+    max-height: 400px;
+    transition: transform 0.3s ease;
 }
 
-nav a
-{
-    padding: 15px 50px;
-    color: white;
-    text-decoration: none;
+.img-container img:hover {
+    transform: scale(1.02);
 }
 
-nav a:hover
-{
-    background-color: rgb(177, 177, 177);
+/* Info section cards */
+.main-container .info {
+    transition: transform 0.2s ease;
 }
 
-.img-container img
-{
-    max-width: 50%;
-    padding-top: 20px;
-    padding: 10px 40px;
+.main-container .info:hover {
+    transform: translateY(-2px);
 }
 
-.titulo
-{
-    padding: 10px 40px;
-    padding-top: 40px;
+/* Reservation buttons */
+.reservas button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.titulo hr
-{
-    max-width: 92.4%;
-    justify-content: center;
-    display: flex;
+.reservas button:hover {
+    transform: translateY(-1px);
 }
 
-.main-container
-{
-    padding: 10px 40px;
-    padding-bottom: 100px;
+/* Footer styling */
+footer {
+    margin-top: auto;
+    padding: 2rem 0;
 }
 
-.info
-{
-    width: 44%;
-    float: left;
-    font-size: 13px;
-    padding: 16px 0px;
-}
-
-.text 
-{
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.text-2
-{
-    font-size: 17px;
-    font-style: italic;
-    padding: 10px;
-}
-
-.titulo-reservas
-{
-    padding: 10px 40px;
-    padding-top: 40px;
-}
-
-.titulo-reservas hr
-{
-    max-width: 92.4%;
-    justify-content: center;
-    display: flex;
-}
-
-.reservas p
-{
-    font-size: 19px;
-    padding-bottom: 15px;
-}
-
-.reservas 
-{
-    padding: 10px 40px;
-}
-
-.reservas button
-{
-    padding: 10px 10px;
-    font-size: 16px;
-    background-color: rgb(179, 179, 179);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
+.footer_1 i {
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.reservas button:hover
-{
-    background-color: rgb(61, 61, 61);
+.footer_1 i:hover {
+    color: #cbd5e0; /* Tailwind's gray-300 */
 }
 
-.btn-dir
-{
-    padding: 10px 40px;
-    padding-bottom: 100px;
+.footer_2 img {
+    object-fit: cover;
+    transition: opacity 0.3s ease;
 }
 
-.btn-dir button
-{
-    padding: 10px 10px;
-    font-size: 16px;
-    background-color: rgb(61, 61, 61);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.footer_2 img:hover {
+    opacity: 0.9;
 }
 
-.btn-dir button:hover
-{
-    background-color: rgb(27, 27, 27);
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .img-container {
+        flex-direction: column;
+    }
+
+    .img-container img {
+        max-height: 300px;
+    }
+
+    .reservas .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer_1, .footer_2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer_2 {
+        justify-content: center;
+        margin-top: 1rem;
+    }
 }
 
-footer
-{
-    background-color: rgb(0, 0, 0);
-    padding: 10px 50px;
-    color: white;
+/* Ensure hr elements in titles are consistent */
+.titulo hr,
+.titulo-reservas hr {
+    transition: width 0.3s ease;
 }
 
-.footer_1
-{
-    padding-top: 20px;
-}
-
-.footer_1 i
-{
-    font-size: 25px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 20px;
-    color: white;
-}
-
-.footer_2
-{
-    display: flex;
-    justify-content: center;
+.titulo:hover hr,
+.titulo-reservas:hover hr {
+    width: 4rem; /* Matches Tailwind's w-16 */
 }

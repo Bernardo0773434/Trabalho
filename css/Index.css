@@ -1,275 +1,111 @@
 /* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* /* Custom styles for Index.html to complement Tailwind CSS */
 
+/* Ensure the body takes full height and has smooth font rendering */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Header */
-.container-img-nav {
-    text-align: center;
-    padding: 1rem;
+/* Header image container */
+header img {
+    object-fit: contain;
+    max-height: 64px; /* Matches Tailwind's h-16 */
 }
 
-.img-nav {
-    max-width: 150px;
-    height: auto;
-}
-
-/* Navigation */
+/* Navigation styling (fine-tuning Tailwind's nav) */
 nav {
-    background: #2c3e50;
-    padding: 1rem;
+    transition: all 0.3s ease;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.nav-links li {
-    margin: 0;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-}
-
-.nav-links a:hover {
-    background: #34495e;
-    border-radius: 5px;
-}
-
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Rooms Section */
-.selection-2 {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-.text-titulo {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.text-btn {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.text-btn a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.text-btn a:hover {
-    text-decoration: underline;
-}
-
-.img-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.quartos {
-    background: #f9f9f9;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.quartos img {
-    width: 100%;
-    height: 200px;
+/* Room and experience image containers */
+.img-container img,
+.experience-grid img {
     object-fit: cover;
+    max-height: 192px; /* Matches Tailwind's h-48 */
+    transition: transform 0.3s ease;
 }
 
-.quartos h2 {
-    padding: 1rem;
-    font-size: 1.2rem;
+.img-container img:hover,
+.experience-grid img:hover {
+    transform: scale(1.02);
 }
 
-/* Experiences Section */
-.experiences {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
+/* Room and experience cards */
+.quartos,
 .experience-item {
-    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.experience-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+.quartos:hover,
+.experience-item:hover {
+    transform: translateY(-2px);
 }
 
-.experience-item h3 {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
+/* 'Ver todos' link styling */
+.text-blue-600:hover i {
+    transform: translateX(4px);
+    transition: transform 0.3s ease;
 }
 
-.experience-item p {
-    padding: 0 1rem;
-}
-
-/* Footer */
-/* Footer */
+/* Footer styling */
 footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 3rem;
+    margin-top: auto;
+    padding: 2rem 0;
 }
 
-.redes-sociais h2 {
-    margin-bottom: 1rem;
+.footer_1 i {
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.redes-sociais i {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    transition: color 0.3s;
+.footer_1 i:hover {
+    color: #cbd5e0; /* Tailwind's gray-300 */
 }
 
-.redes-sociais i:hover {
-    color: #f1c40f;
-}
-
-.galeria-footer img {
-    width: 100px;
-    height: 60px;
+.footer_2 img {
     object-fit: cover;
-    margin-right: 10px;
-    border-radius: 6px;
-}
-/* Footer */
-footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 3rem;
+    transition: opacity 0.3s ease;
 }
 
-.redes-sociais h2 {
-    margin-bottom: 1rem;
+.footer_2 img:hover {
+    opacity: 0.9;
 }
 
-.redes-sociais i {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    transition: color 0.3s;
-}
-
-.redes-sociais i:hover {
-    color: #f1c40f;
-}
-
-.galeria-footer img {
-    width: 100px;
-    height: 60px;
-    object-fit: cover;
-    margin-right: 10px;
-    border-radius: 6px;
-}
-
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background: #2c3e50;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 1rem;
-    }
-
-    .img-container {
-        grid-template-columns: 1fr;
-    }
-
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .img-container,
     .experience-grid {
         grid-template-columns: 1fr;
     }
 
-    .quartos img, .experience-item img {
-        height: 150px;
+    .img-container img,
+    .experience-grid img {
+        max-height: 160px; /* Slightly smaller images on mobile */
+    }
+
+    .footer_1,
+    .footer_2 {
+        width: 100%;
+        text-align: center;
     }
 
     .footer_2 {
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
     }
+}
 
-    .footer_2 img {
-        width: 80%;
-        max-width: 200px;
-    }
+/* Ensure hr elements in titles are consistent */
+.selection-2 h2 + hr,
+.experiences h2 + hr {
+    transition: width 0.3s ease;
+}
+
+.selection-2:hover h2 + hr,
+.experiences:hover h2 + hr {
+    width: 4rem; /* Matches Tailwind's w-16 */
 }
